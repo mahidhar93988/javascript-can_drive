@@ -1,10 +1,11 @@
 function RunCallback(a, b, cb) {
 
-    result = a + b 
+    var result = a + b 
 
-    return result 
-    
-    
+    return cb(result) 
 }
 
+function cb(a){
+    return a
+}
 module.exports = RunCallback;
